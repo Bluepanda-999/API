@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Weather Dashboard</h1>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name..." value="Almaty">
+                <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="dashboard">
+                <!-- Weather Section -->
+                <section class="weather-card">
+                    <h2><i class="fas fa-temperature-high"></i> Current Weather</h2>
+                    <div class="weather-info" id="weatherInfo">
+                        <!-- Weather data -->
+                    </div>
+                </section>
+
+                <!-- Map Section -->
+                <section class="map-card">
+                    <h2><i class="fas fa-map-marked-alt"></i> Location Map</h2>
+                    <div id="map"></div>
+                </section>
+
+                <!-- News Section -->
+                <section class="news-card">
+                    <h2><i class="fas fa-newspaper"></i> Latest News</h2>
+                    <div class="news-container" id="newsContainer">
+                        <!-- News will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Currency Section -->
+                <section class="currency-card">
+                    <h2><i class="fas fa-money-bill-wave"></i> Exchange Rates</h2>
+                    <div class="currency-info" id="currencyInfo">
+                        <!-- Currency data will be loaded here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>with love from Kultivator | Bluepanda </p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
